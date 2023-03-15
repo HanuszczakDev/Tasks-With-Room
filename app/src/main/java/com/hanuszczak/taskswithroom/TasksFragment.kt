@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import com.hanuszczak.taskswithroom.adapter.TaskItemAdapter
 import com.hanuszczak.taskswithroom.databinding.FragmentTasksBinding
 
 class TasksFragment : Fragment() {
@@ -27,6 +28,15 @@ class TasksFragment : Fragment() {
 
         binding.viewModel = viewModel
         binding.lifecycleOwner = viewLifecycleOwner
+
+        val adapter = TaskItemAdapter()
+        binding.tasksList.adapter = adapter
+
+        viewModel.tasks.observe(viewLifecycleOwner) {
+            it?.let {
+                adapter.data = it
+            }
+        }
 
         return view
     }
