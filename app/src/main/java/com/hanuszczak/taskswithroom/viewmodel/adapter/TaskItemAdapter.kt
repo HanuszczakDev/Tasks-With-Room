@@ -1,16 +1,17 @@
-package com.hanuszczak.taskswithroom.adapter
+package com.hanuszczak.taskswithroom.viewmodel.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.hanuszczak.taskswithroom.DiffUtil.TaskDiffItemCallback
-import com.hanuszczak.taskswithroom.Task
+import com.hanuszczak.taskswithroom.viewmodel.util.TaskDiffItemCallback
+import com.hanuszczak.taskswithroom.model.Task
 import com.hanuszczak.taskswithroom.databinding.TaskItemBinding
 
 class TaskItemAdapter(val clickListener: (taskId: Long) -> Unit)
     : ListAdapter<Task, TaskItemAdapter.TaskItemViewHolder>(TaskDiffItemCallback()) {
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskItemViewHolder = TaskItemViewHolder.inflateFrom(parent)
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskItemViewHolder =
+        TaskItemViewHolder.inflateFrom(parent)
 
     override fun onBindViewHolder(holder: TaskItemViewHolder, position: Int) {
         val item = getItem(position)

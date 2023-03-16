@@ -1,4 +1,4 @@
-package com.hanuszczak.taskswithroom
+package com.hanuszczak.taskswithroom.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,8 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
-import com.hanuszczak.taskswithroom.adapter.TaskItemAdapter
+import com.hanuszczak.taskswithroom.model.TaskDatabase
+import com.hanuszczak.taskswithroom.viewmodel.adapter.TaskItemAdapter
 import com.hanuszczak.taskswithroom.databinding.FragmentTasksBinding
+import com.hanuszczak.taskswithroom.viewmodel.task.TaskViewModelFactory
+import com.hanuszczak.taskswithroom.viewmodel.task.TasksViewModel
 
 class TasksFragment : Fragment() {
     private var _binding: FragmentTasksBinding? = null

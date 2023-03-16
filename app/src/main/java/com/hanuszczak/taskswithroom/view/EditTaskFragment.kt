@@ -1,4 +1,4 @@
-package com.hanuszczak.taskswithroom
+package com.hanuszczak.taskswithroom.view
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,7 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
+import com.hanuszczak.taskswithroom.R
+import com.hanuszczak.taskswithroom.model.TaskDatabase
 import com.hanuszczak.taskswithroom.databinding.FragmentEditTaskBinding
+import com.hanuszczak.taskswithroom.viewmodel.editTask.EditTaskViewModel
+import com.hanuszczak.taskswithroom.viewmodel.editTask.EditTaskViewModelFactory
 
 class EditTaskFragment : Fragment() {
     private var _binding: FragmentEditTaskBinding? = null

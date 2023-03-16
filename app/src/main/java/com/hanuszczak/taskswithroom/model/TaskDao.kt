@@ -1,4 +1,4 @@
-package com.hanuszczak.taskswithroom
+package com.hanuszczak.taskswithroom.model
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

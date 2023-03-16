@@ -1,4 +1,4 @@
-package com.hanuszczak.taskswithroom
+package com.hanuszczak.taskswithroom.model
 
 import android.content.Context
 import androidx.room.Database

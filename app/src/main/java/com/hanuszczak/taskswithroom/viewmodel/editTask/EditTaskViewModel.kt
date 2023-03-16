@@ -1,9 +1,10 @@
-package com.hanuszczak.taskswithroom
+package com.hanuszczak.taskswithroom.viewmodel.editTask
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.hanuszczak.taskswithroom.model.TaskDao
 import kotlinx.coroutines.launch
 
 class EditTaskViewModel(taskId: Long, val dao: TaskDao) : ViewModel() {

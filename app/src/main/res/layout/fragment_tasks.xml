@@ -2,12 +2,12 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".TasksFragment">
+    tools:context=".view.TasksFragment">
 
     <data>
         <variable
             name="viewModel"
-            type="com.hanuszczak.taskswithroom.TasksViewModel" />
+            type="com.hanuszczak.taskswithroom.viewmodel.task.TasksViewModel" />
     </data>
 
     <LinearLayout
